@@ -1,0 +1,32 @@
+*** chain.c.orig	Fri Jun 04 21:01:28 1993
+--- chain.c	Mon Nov 28 20:05:04 1994
+***************
+*** 19,20 ****
+--- 19,25 ----
+  #else
++ #ifdef __EMX__
++ #define PATH_SEP "\\"
++ #define XPATH 128
++ #define SENDMAIL "sendmail -f user@nowhere %s"
++ #else
+  #define PATH_SEP "/"
+***************
+*** 23,24 ****
+--- 28,30 ----
+  #endif
++ #endif
+  
+***************
+*** 104,107 ****
+--- 110,120 ----
+  	}
++ #ifdef __EMX__
++     strcat (infile, "c1XXXXXX");
++     strcat (outfile, "c2XXXXXX");
++     mktemp (infile);
++     mktemp (outfile);
++ #else
+      strcat (infile, mktemp ("c1XXXXXX"));
+  	strcat (outfile, mktemp ("c2XXXXXX"));
++ #endif
+  

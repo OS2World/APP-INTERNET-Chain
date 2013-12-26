@@ -1,0 +1,31 @@
+This is an OS/2 port of 'chain', release 1.0.
+It is a program designed to assist in using the Cypherpunks remailers.
+
+Chain is written by Hal Finney, 74076.1041@compuserve.com
+and is placed in the public domain; its source code may be freely used.
+
+The OS/2 porter is Michele Marziani, marziani@vaxfe.fe.infn.it
+
+The original source code and the DOS executable by Hal are included in
+this archive as the file DOS/chainDOS.zip.
+
+This OS/2 port is more Unix-like than the DOS version since it is fully
+sendmail enabled (see the included chain.doc) provided you have IBM TCP/IP
+version 1.2.1 for OS/2 or above.
+
+Source code patches are included in the file patches.os2 and are quite
+trivial, mainly a fix for the proper usage of the mktemp() function.
+The source has been compiled, using the included compile.cmd script, with
+Eberhard Mattes' emx0.8h pl 10 and gcc 2.6.0.
+
+You definitely need the emx runtime package (available from hobbes and
+mirrors) to make use of chain for OS/2. Of course you also need an OS/2
+version of PGP.
+
+--
+
+Michele Marziani
+
+/* Universita' di Ferrara       E-mail: marziani@vaxfe.fe.infn.it *
+ * Dipartimento di Fisica               Telephone: +39 532 781823 *
+ * 44100 Ferrara - ITALY                      Fax: +39 532 781810 */
